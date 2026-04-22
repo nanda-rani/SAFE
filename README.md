@@ -6,6 +6,34 @@ A system for contextual security auditing of research artifacts. This tool takes
 
 The Auditor relies on a ReAct (Reason/Act) agent powered by LangGraph. It is equipped with explicit filesystem tools allowing it to recursively inspect the source code, trace dependency trees, identify active entrypoints, and assess context.
 
+## 🏗️ Repository Structure
+SAFE/
+│── main.py # Entry point for running SAFE
+│── config.yaml # Configuration file
+│── requirements.txt # Project dependencies
+│── SAFE_TOOL_OUTPUT.csv # Example output file
+│
+├── core/ # Core pipeline and reasoning logic
+│ ├── auditor.py # Main auditing workflow
+│ ├── validator.py # Validation and checks
+│ ├── guardrails.py # Safety and constraint handling
+│ ├── schemas.py # Data structures and schemas
+│ └── logger.py # Logging utilities
+│
+├── tools/ # Code and artifact analysis utilities
+│ ├── repo_parser.py # Repository structure parsing
+│ ├── ast_parser.py # AST-based code analysis
+│ ├── dependency_analyzer.py
+│ ├── file_reader.py
+│ ├── code_search.py
+│ └── artifact_resolver.py
+│
+├── llm/ # LLM interaction layer
+│ ├── provider.py # LLM provider abstraction
+│ └── cost_tracker.py # Token and cost tracking
+│
+└── SAFE/ # Self-contained sample artifact used for testing SAFE on its own codebase
+
 ### Supported Models
 Configurable via `config.yaml`, the system supports:
 - `gpt-4o`
@@ -13,7 +41,13 @@ Configurable via `config.yaml`, the system supports:
 
 ## Setup Instructions
 
-1. **Install Virtual Environment**
+1. Setup Repository
+   ```bash
+   git clone https://github.com/nanda-rani/SAFE.git
+   cd SAFE
+   ```
+
+2. **Install Virtual Environment**
    ```bash
    python -m venv .venv
    source .venv/bin/activate
