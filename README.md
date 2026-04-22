@@ -17,7 +17,6 @@ SAFE/
 ├── core/                         # Core reasoning & pipeline logic
 │   ├── auditor.py                # Main auditing pipeline
 │   ├── validator.py              # Validation logic
-│   ├── guardrails.py             # Safety constraints
 │   ├── schemas.py                # Data schemas
 │   └── logger.py                 # Logging utilities
 │
