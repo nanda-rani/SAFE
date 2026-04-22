@@ -12,7 +12,7 @@ SAFE/
 │── main.py                       # Entry point
 │── config.yaml                   # Configuration file
 │── requirements.txt              # Dependencies
-│── SAFE_TOOL_OUTPUT.csv          # Tool output for SAFE (its own codebase)
+│── SAFE_TOOL_OUTPUT.csv          # Tool (Semgrep and Trivy) output for SAFE (its own codebase)
 │
 ├── core/                         # Core reasoning & pipeline logic
 │   ├── auditor.py                # Main auditing pipeline
