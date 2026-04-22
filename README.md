@@ -1,7 +1,8 @@
 # SAFE (Security-Aware Framework for Artifact Evaluation)
 
-A system for contextual security auditing of research artifacts. This tool takes noisy outputs from static analysis scanners (like Semgrep and Trivy) and uses a repository-aware Large Language Model (LLM) agent to determine the real-world exploitability or context of the finding.
-The Auditor relies on a ReAct (Reason/Act) agent powered by LangGraph. It is equipped with explicit filesystem tools allowing it to recursively inspect the source code, trace dependency trees, identify active entrypoints, and assess context.
+SAFE is a system for contextual security auditing of research artifacts. It takes outputs from static analysis tools (e.g., Semgrep, Trivy) and uses a repository-aware LLM agent to determine whether a finding is truly exploitable in real-world usage.
+
+The system uses a ReAct-style agent powered by LangGraph, equipped with filesystem tools to inspect code, trace dependencies, and reason about execution context.
 
 ## Repository Structure
 ```bash
