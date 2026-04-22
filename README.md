@@ -129,12 +129,12 @@ semgrep scan --config auto --json > semgrep.json
 trivy fs --format json --output trivy.json .
 ```
 
-### Convert Outputs to SAFE CSV
+### Convert Outputs to CSV
 
 Example Entry:
 
-artifact_id,tool,finding_id,category,severity_raw,file,line,message,package,version,cwe,cvss,scanner_applicable
-my_project,semgrep,python.lang.security.eval,code,HIGH,app.py,10,Use of eval,,,"CWE-95",,true
+artifact_id;tool;finding_id;category;severity_raw;file;line;message;package;version;cwe;cvss;scanner_applicable
+my_project;semgrep;python.lang.security.eval;code;HIGH;app.py;10;Use of eval;;;"CWE-95";;true
 
 ### Step 3: Configure SAFE
 
