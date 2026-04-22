@@ -67,21 +67,18 @@ SAFE/
 4. **Configuration Settings**
    Edit `config.yaml` to select model string, paths, and maximum retry counts for schema validation.
 
-## Example Usage
-
-Run the auditor after completing setup:
-
-```bash
-python main.py
-```
-
-Check logs and outputs:
-
-```bash
-cat outputs/logs/system.log
-cat outputs/logs/<finding_uid>.json
-cat outputs/logs/repo_<artifact_id>.log
-```
+5. **Run**
+   Run the auditor after completing setup:
+   ```bash
+   python main.py
+   ```
+6. **Output**
+   Check logs and outputs:
+   ```bash
+   cat outputs/logs/system.log
+   cat outputs/logs/<finding_uid>.json
+   cat outputs/logs/repo_<artifact_id>.log
+   ```
 
 ## How Analysis Works
 
