@@ -71,7 +71,7 @@ Configurable via `config.yaml`, the system supports:
 
 3. **Data Placement**
    - Modify `config.yaml` the CSV file containing findings/flags (`SAFE_TOOL_OUTPUT.csv` for demo) obtained from static analysis tool.
-   - Place your analyzed repositories in the `SAFE/` folder. The structure should map `artifact_id` to directories (e.g. `SAFE/<artifact_id>/`).
+   - Place your analyzed repositories in the `ARTIFACT/` folder. The structure should map `artifact_id` to directories (e.g. `ARTIFACT/<artifact_id>/`).
 
 4. **Configuration Settings**
    Edit `config.yaml` to select model string, paths, and maximum retry counts for schema validation.
@@ -79,7 +79,7 @@ Configurable via `config.yaml`, the system supports:
 ## How Analysis Works
 
 1. **Initialization:** The script reads findings from `SAFE_TOOL_OUTPUT.csv`.
-2. **Artifact Resolution:** For each row, the script resolves the `artifact_id` against the `SAFE/` root to pinpoint the local Git repository matching the finding.
+2. **Artifact Resolution:** For each row, the script resolves the `artifact_id` against the `ARTIFACT/` root to pinpoint the local Git repository matching the finding.
 3. **Agent Delegation:** The specific finding metadata (file, message, priority, line code) is passed to the LangGraph ReAct agent.
 4. **Tool Use:** The Agent dynamically executes local python functions exposed to it (`get_repo_tree`, `read_snippet`, `search_package_usage`, etc.) inspecting the filesystem for evidence.
 5. **JSON Emittance:** The Agent concludes its analysis loop by emitting a final strict JSON evaluation mapping the artifact into standard Taxonomy boundaries (e.g. `CONTEXTUAL_RISK` vs `FALSE_POSITIVE`).
@@ -113,6 +113,6 @@ cat outputs/logs/<artifact_id>.json
 
 ## Troubleshooting
 
-- **Missing Artifact**: If the log states "Skipping due to missing artifact path", ensure the ID column in your CSV correlates locally to a folder exactly inside `SAFE/`.
+- **Missing Artifact**: If the log states "Skipping due to missing artifact path", ensure the ID column in your CSV correlates locally to a folder exactly inside `ARTIFACT/`.
 - **API Timeout/Limits**: Switch model down (e.g., to `gpt-4o-mini`) via `config.yaml` if you are hitting aggressive tier limits on concurrent tools querying models.
 - **Missing API keys**: Running the system fails out immediately. Set your standard keys via `export` before invoking.
