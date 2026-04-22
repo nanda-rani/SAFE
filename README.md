@@ -70,6 +70,21 @@ SAFE/
 4. **Configuration Settings**
    Edit `config.yaml` to select model string, paths, and maximum retry counts for schema validation.
 
+## Example Usage
+
+Run the auditor after completing setup:
+
+```bash
+python main.py
+```
+
+Check logs and outputs:
+
+```bash
+cat outputs/logs/system.log
+cat outputs/logs/<finding_uid>.json
+```
+
 ## How Analysis Works
 
 1. **Initialization:** The script reads findings from `SAFE_TOOL_OUTPUT.csv`.
@@ -90,20 +105,6 @@ All outputs from the framework are routed into the `outputs/` directory dynamica
 - **`outputs/costs/global_costs.json`**: An appending aggregator showing combined total dollars dynamically calculated per the requested LLM.
 - **`outputs/costs/<finding_uid>_cost.json`**: The isolated calculated USD dollar cost strictly applied measuring the prompt/completion token usage to investigate the singular finding.
 
-## Example Usage
-
-Run the auditor after completing setup:
-
-```bash
-python main.py
-```
-
-Check logs and outputs:
-
-```bash
-cat outputs/logs/system.log
-cat outputs/logs/<finding_uid>.json
-```
 
 ## Troubleshooting
 
