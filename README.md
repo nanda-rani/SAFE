@@ -7,6 +7,7 @@ A system for contextual security auditing of research artifacts. This tool takes
 The Auditor relies on a ReAct (Reason/Act) agent powered by LangGraph. It is equipped with explicit filesystem tools allowing it to recursively inspect the source code, trace dependency trees, identify active entrypoints, and assess context.
 
 ## 🏗️ Repository Structure
+```bash
 SAFE/
 │── main.py                  # Entry point
 │── config.yaml              # Configuration file
@@ -41,6 +42,7 @@ SAFE/
 │   └── reporter.txt
 │
 └── SAFE/                    # Self-contained sample artifact used for testing SAFE on its own codebase
+```
 
 ### Supported Models
 Configurable via `config.yaml`, the system supports:
