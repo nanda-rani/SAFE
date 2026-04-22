@@ -1,0 +1,40 @@
+2026-04-21 13:53:17,006 - [INFO] - system - Starting Contextual Security Auditor
+2026-04-21 13:53:17,008 - [INFO] - system - Using model: gpt-4o
+2026-04-21 13:54:52,904 - [INFO] - system - Starting Contextual Security Auditor
+2026-04-21 13:54:52,906 - [INFO] - system - Using model: gpt-4o
+2026-04-21 13:54:53,561 - [INFO] - system - Loaded 8 findings from SAFE_SEMICOLON.csv
+2026-04-21 13:54:53,562 - [INFO] - system - Processing finding: CVE-2025-68664_SAFE
+2026-04-21 13:54:53,562 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:54:53,562 - [INFO] - system - Building Repository Understanding for SAFE...
+2026-04-21 13:55:20,162 - [INFO] - system - Cached Repo Understanding for SAFE
+2026-04-21 13:55:20,162 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:55:32,423 - [INFO] - system - Saved output for CVE-2025-68664_SAFE
+2026-04-21 13:55:32,423 - [INFO] - system - Processing finding: CVE-2025-65106_SAFE
+2026-04-21 13:55:32,424 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:55:32,424 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:55:48,939 - [INFO] - system - Saved output for CVE-2025-65106_SAFE
+2026-04-21 13:55:48,940 - [INFO] - system - Processing finding: CVE-2026-34070_SAFE
+2026-04-21 13:55:48,941 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:55:48,941 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:56:02,392 - [INFO] - system - Saved output for CVE-2026-34070_SAFE
+2026-04-21 13:56:02,392 - [INFO] - system - Processing finding: CVE-2024-10940_SAFE
+2026-04-21 13:56:02,393 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:56:02,393 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:56:15,700 - [INFO] - system - Saved output for CVE-2024-10940_SAFE
+2026-04-21 13:56:15,700 - [INFO] - system - Processing finding: CVE-2026-40087_SAFE
+2026-04-21 13:56:15,701 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:56:15,701 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:56:40,302 - [INFO] - system - Saved output for CVE-2026-40087_SAFE
+2026-04-21 13:56:40,302 - [INFO] - system - Processing finding: CVE-2026-26013_SAFE
+2026-04-21 13:56:40,303 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:56:40,303 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:56:51,626 - [INFO] - system - Saved output for CVE-2026-26013_SAFE
+2026-04-21 13:56:51,626 - [INFO] - system - Processing finding: GHSA-r7w7-9xr2-qq2r_SAFE
+2026-04-21 13:56:51,627 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:56:51,627 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:57:03,327 - [INFO] - system - Saved output for GHSA-r7w7-9xr2-qq2r_SAFE
+2026-04-21 13:57:03,328 - [INFO] - system - Processing finding: CVE-2026-28277_SAFE
+2026-04-21 13:57:03,328 - [INFO] - system - Resolved artifact 'SAFE' → '/data/nrani/SAFE/SAFE'
+2026-04-21 13:57:03,328 - [INFO] - system - Analyzing finding context...
+2026-04-21 13:57:30,109 - [INFO] - system - Saved output for CVE-2026-28277_SAFE
+2026-04-21 13:57:30,111 - [INFO] - system - Auditor run complete.

@@ -1,0 +1,9 @@
+;artifact_id;tool;finding_id;category;severity_raw;file;line;message;package;version;cwe;cvss;scanner_applicable
+0;SAFE;trivy;CVE-2025-68664;dependency;CRITICAL;;;langchain-core: LangChain: Arbitrary code execution via serialization injection;langchain-core;0.2.39;CWE-502;8.2;yes
+1;SAFE;trivy;CVE-2025-65106;dependency;HIGH;;;langchain-core: LangChain Vulnerable to Template Injection via Attribute Access in Prompt Templates;langchain-core;0.2.39;CWE-1336;;yes
+2;SAFE;trivy;CVE-2026-34070;dependency;HIGH;;;langchain: path traversal in legacy load_prompt functions in langchain-core;langchain-core;0.2.39;CWE-22;;yes
+3;SAFE;trivy;CVE-2024-10940;dependency;MEDIUM;;;langchain-core: Exposure of Sensitive System Information via ImagePromptTemplate in langchain-ai/langchain;langchain-core;0.2.39;CWE-497;;yes
+4;SAFE;trivy;CVE-2026-40087;dependency;MEDIUM;;;langchain: incomplete f-string validation in prompt templates;langchain-core;0.2.39;CWE-1336;;yes
+5;SAFE;trivy;CVE-2026-26013;dependency;LOW;;;langchain: SSRF via image_url token counting in ChatOpenAI.get_num_tokens_from_messages;langchain-core;0.2.39;CWE-918;;yes
+6;SAFE;trivy;GHSA-r7w7-9xr2-qq2r;dependency;LOW;;;langchain-openai: Image token counting SSRF protection can be bypassed via DNS rebinding;langchain-openai;0.1.22;;;yes
+7;SAFE;trivy;CVE-2026-28277;dependency;MEDIUM;;;LangGraph checkpoint loading has unsafe msgpack deserialization;langgraph;0.2.35;CWE-502;;yes

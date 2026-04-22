@@ -1,0 +1,5 @@
+model: "gpt-4o
+max_retries: 3
+artifact_root: "./"
+input_csv: "SAFE.csv"
+output_csv: "outputs/final_results.csv"

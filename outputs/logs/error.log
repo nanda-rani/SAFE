@@ -1,0 +1,1 @@
+2026-04-21 13:53:17,008 - [ERROR] - error - Failed to initialize agent (check API keys): OPENAI_API_KEY environment variable is not set.
