@@ -83,6 +83,7 @@ Check logs and outputs:
 ```bash
 cat outputs/logs/system.log
 cat outputs/logs/<finding_uid>.json
+cat outputs/logs/repo_<artifact_id>.log
 ```
 
 ## How Analysis Works
