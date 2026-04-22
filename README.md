@@ -131,19 +131,10 @@ trivy fs --format json --output trivy.json .
 
 ### Convert Outputs to SAFE CSV
 
-Required fields:
-
-- artifact_id
-- file
-- line
-- message
-- tool
-- severity
-
 Example Entry:
 
-artifact_id;file;line;message;tool;severity  
-my_project;requirements.txt;;flask CVE-XXXX;trivy;HIGH  
+artifact_id,tool,finding_id,category,severity_raw,file,line,message,package,version,cwe,cvss,scanner_applicable
+my_project,semgrep,python.lang.security.eval,code,HIGH,app.py,10,Use of eval,,,"CWE-95",,true
 
 ### Step 3: Configure SAFE
 
