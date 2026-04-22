@@ -82,7 +82,7 @@ Configurable via `config.yaml`, the system supports:
 2. **Artifact Resolution:** For each row, the script resolves the `artifact_id` against the `SAFE/` root to pinpoint the local Git repository matching the finding.
 3. **Agent Delegation:** The specific finding metadata (file, message, priority, line code) is passed to the LangGraph ReAct agent.
 4. **Tool Use:** The Agent dynamically executes local python functions exposed to it (`get_repo_tree`, `read_snippet`, `search_package_usage`, etc.) inspecting the filesystem for evidence.
-5. **JSON Emittance:** The Agent concludes its analysis loop by emitting a final strict JSON evaluation mapping the artifact into standard Taxonomy boundaries (e.g. `TRUE_SECURITY_RISK` vs `FALSE_POSITIVE`).
+5. **JSON Emittance:** The Agent concludes its analysis loop by emitting a final strict JSON evaluation mapping the artifact into standard Taxonomy boundaries (e.g. `CONTEXTUAL_RISK` vs `FALSE_POSITIVE`).
 6. **Validation:** Pydantic logic strictly enforces that the final payload complies. If not, the LangGraph loop repeats requesting the LLM to fix formatting.
 
 ## Logging and Cost Tracking
