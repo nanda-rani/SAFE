@@ -78,15 +78,13 @@ SAFE/
    cat outputs/logs/repo_<artifact_id>.log
    ```
 
----
-
 ## Quick Start: Run SAFE on Its Own Codebase
 
-This repository already includes a ready-to-run demo.
+This repository already includes a ready-to-run demo setup so you can test SAFE without preparing any external data.
 
 ### Pre-configured setup:
-- `SAFE_TOOL_OUTPUT.csv` → findings from SAFE
-- `ARTIFACT/SAFE/` → SAFE codebase copy
+- `SAFE_TOOL_OUTPUT.csv` → Findings generated from SAFE’s own codebase (via Semgrep + Trivy)
+- `ARTIFACT/SAFE/` → A copy of the SAFE repository used as the target artifact
 
 ### Mapping:
 ```
@@ -99,8 +97,6 @@ artifact_id (CSV) = SAFE
 ```bash
 python main.py
 ```
-
----
 
 ## How Analysis Works
 
