@@ -99,6 +99,85 @@ artifact_id (CSV) = SAFE
 python main.py
 ```
 
+---
+
+## Run SAFE on Your Own Artifact
+
+### Step 1: Prepare Artifact
+
+```bash
+ARTIFACT/
+└── my_project/
+```
+
+---
+
+### Step 2: Generate Findings
+
+#### Option A: Semgrep
+
+```bash
+semgrep scan --config auto --json > semgrep.json
+```
+
+#### Option B: Trivy
+
+```bash
+trivy fs --format json --output trivy.json .
+```
+
+---
+
+### Convert Outputs to SAFE CSV
+
+Required fields:
+
+- artifact_id
+- file
+- line
+- message
+- tool
+- severity
+
+Example (Trivy → CSV):
+
+artifact_id,file,line,message,tool,severity  
+my_project,requirements.txt,,flask CVE-XXXX,trivy,HIGH  
+
+---
+
+### Step 3: Configure SAFE
+
+Edit config.yaml:
+
+input_csv: my_project_findings.csv  
+artifact_root: ARTIFACT/
+
+---
+
+### Step 4: Run
+
+```bash
+python main.py
+```
+
+---
+
+### Step 5: Outputs
+
+- outputs/final_results.csv  
+- outputs/logs/  
+- outputs/costs/  
+
+---
+
+## Core Mapping Rule
+
+artifact_id → ARTIFACT/<artifact_id>/
+
+---
+
+
 ## How Analysis Works
 
 1. **Initialization:** The script reads findings from `SAFE_TOOL_OUTPUT.csv`.
