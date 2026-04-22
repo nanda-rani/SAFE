@@ -33,14 +33,6 @@ SAFE/
 │   ├── provider.py          # LLM abstraction (OpenAI, etc.)
 │   └── cost_tracker.py      # Token & cost tracking
 │
-├── prompts/                 # Prompt templates for LLM reasoning
-│   ├── ingestion.txt
-│   ├── verifier.txt
-│   ├── exploitability.txt
-│   ├── taxonomy.txt
-│   ├── finding_context.txt
-│   └── reporter.txt
-│
 └── SAFE/                    # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
 
