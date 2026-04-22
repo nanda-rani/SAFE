@@ -42,11 +42,6 @@ SAFE/
 │   └── SAFE/                     # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
 
-### Supported Models
-Configurable via `config.yaml`, the system supports:
-- `gpt-4o`
-- `gpt-4o-mini`
-
 ## Setup Instructions
 
 1. Setup Repository
