@@ -9,31 +9,31 @@ The Auditor relies on a ReAct (Reason/Act) agent powered by LangGraph. It is equ
 ## 🏗️ Repository Structure
 ```bash
 SAFE/
-│── main.py                  # Entry point
-│── config.yaml              # Configuration file
-│── requirements.txt         # Dependencies
-│── SAFE_TOOL_OUTPUT.csv     # Example output
+│── main.py                       # Entry point
+│── config.yaml                   # Configuration file
+│── requirements.txt              # Dependencies
+│── SAFE_TOOL_OUTPUT.csv          # Example output
 │
-├── core/                    # Core reasoning & pipeline logic
-│   ├── auditor.py           # Main auditing pipeline
-│   ├── validator.py         # Validation logic
-│   ├── guardrails.py        # Safety constraints
-│   ├── schemas.py           # Data schemas
-│   └── logger.py            # Logging utilities
+├── core/                         # Core reasoning & pipeline logic
+│   ├── auditor.py                # Main auditing pipeline
+│   ├── validator.py              # Validation logic
+│   ├── guardrails.py             # Safety constraints
+│   ├── schemas.py                # Data schemas
+│   └── logger.py                 # Logging utilities
 │
-├── tools/                   # Static & structural analysis tools
-│   ├── repo_parser.py       # Repository structure parsing
-│   ├── ast_parser.py        # Code-level AST analysis
-│   ├── dependency_analyzer.py
-│   ├── file_reader.py
-│   ├── code_search.py
-│   └── artifact_resolver.py
+├── tools/                        # Static & structural analysis tools
+│   ├── repo_parser.py            # Repository structure parsing
+│   ├── ast_parser.py             # Code-level AST analysis
+│   ├── dependency_analyzer.py    # Analyzes dependencies between modules and files
+│   ├── file_reader.py            # Handles file loading and content extraction
+│   ├── code_search.py.           # Enables keyword and pattern-based code search
+│   └── artifact_resolver.py.     # Resolves artifacts and links related components
 │
-├── llm/                     # LLM interaction layer
-│   ├── provider.py          # LLM abstraction (OpenAI, etc.)
-│   └── cost_tracker.py      # Token & cost tracking
+├── llm/                          # LLM interaction layer
+│   ├── provider.py               # LLM abstraction
+│   └── cost_tracker.py           # Token & cost tracking
 │
-└── SAFE/                    # Self-contained sample artifact used for testing SAFE on its own codebase
+└── SAFE/                         # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
 
 ### Supported Models
