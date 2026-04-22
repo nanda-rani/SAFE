@@ -12,7 +12,7 @@ SAFE/
 │── main.py                       # Entry point
 │── config.yaml                   # Configuration file
 │── requirements.txt              # Dependencies
-│── SAFE_TOOL_OUTPUT.csv          # Example output
+│── SAFE_TOOL_OUTPUT.csv          # Tool output for SAFE (its own codebase)
 │
 ├── core/                         # Core reasoning & pipeline logic
 │   ├── auditor.py                # Main auditing pipeline
@@ -32,6 +32,11 @@ SAFE/
 ├── llm/                          # LLM interaction layer
 │   ├── provider.py               # LLM abstraction
 │   └── cost_tracker.py           # Token & cost tracking
+│
+├── outputs/                      # Generated outputs from SAFE runs
+│   ├── final_results.csv         # Final classified findings/results
+│   ├── costs/                    # Cost tracking outputs
+│   └── logs/                     # Execution logs
 │
 └── SAFE/                         # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
