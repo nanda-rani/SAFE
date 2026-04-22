@@ -61,8 +61,8 @@ SAFE/
    ```
 
 3. **Data Placement**
-   - Modify `config.yaml` the CSV file containing findings/flags (`SAFE_TOOL_OUTPUT.csv` for demo) obtained from static analysis tool.
-   - Place your analyzed repositories in the `ARTIFACT/` folder. The structure should map `artifact_id` to directories (e.g. `ARTIFACT/<artifact_id>/`).
+   - Modify `config.yaml` the CSV file containing findings/flags (`SAFE_TOOL_OUTPUT.csv` for demo) obtained from static analysis tool. `SAFE_TOOL_OUTPUT.csv` is the colelction of flags obtained using static analysis tools (Semgrep and Trivy).
+   - Place your analyzed repositories in the `ARTIFACT/` folder. The structure should map `artifact_id` to directories (e.g. `ARTIFACT/<artifact_id>/`). `ARTIFACT` Folder contains SAFE codebase copied in side the folder.
 
 4. **Configuration Settings**
    Edit `config.yaml` to select model string, paths, and maximum retry counts for schema validation.
@@ -77,6 +77,30 @@ SAFE/
    cat outputs/logs/<finding_uid>.json
    cat outputs/logs/repo_<artifact_id>.log
    ```
+
+---
+
+## Quick Start: Run SAFE on Its Own Codebase
+
+This repository already includes a ready-to-run demo.
+
+### Pre-configured setup:
+- `SAFE_TOOL_OUTPUT.csv` → findings from SAFE
+- `ARTIFACT/SAFE/` → SAFE codebase copy
+
+### Mapping:
+```
+artifact_id (CSV) = SAFE
+→ ARTIFACT/SAFE/
+```
+
+### Run:
+
+```bash
+python main.py
+```
+
+---
 
 ## How Analysis Works
 
