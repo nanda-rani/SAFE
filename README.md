@@ -4,6 +4,8 @@ SAFE is a system for contextual security auditing of research artifacts. It take
 
 The system uses a ReAct-style agent powered by LangGraph, equipped with filesystem tools to inspect code, trace dependencies, and reason about execution context.
 
+---
+
 ## Repository Structure
 ```bash
 SAFE/
@@ -39,6 +41,8 @@ SAFE/
 ├── ARTIFACT
 │   └── SAFE/                     # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
+
+---
 
 ## Setup Instructions
 
@@ -78,6 +82,7 @@ SAFE/
    cat outputs/logs/<finding_uid>.json
    cat outputs/logs/repo_<artifact_id>.log
    ```
+---
 
 ## Quick Start: Run SAFE on Its Own Codebase
 
@@ -110,8 +115,6 @@ ARTIFACT/
 └── my_project/
 ```
 
----
-
 ### Step 2: Generate Findings
 
 #### Option A: Semgrep
@@ -126,8 +129,6 @@ semgrep scan --config auto --json > semgrep.json
 trivy fs --format json --output trivy.json .
 ```
 
----
-
 ### Convert Outputs to SAFE CSV
 
 Required fields:
@@ -139,12 +140,10 @@ Required fields:
 - tool
 - severity
 
-Example (Trivy → CSV):
+Example Entry:
 
-artifact_id,file,line,message,tool,severity  
-my_project,requirements.txt,,flask CVE-XXXX,trivy,HIGH  
-
----
+artifact_id;file;line;message;tool;severity  
+my_project;requirements.txt;;flask CVE-XXXX;trivy;HIGH  
 
 ### Step 3: Configure SAFE
 
@@ -153,15 +152,11 @@ Edit config.yaml:
 input_csv: my_project_findings.csv  
 artifact_root: ARTIFACT/
 
----
-
 ### Step 4: Run
 
 ```bash
 python main.py
 ```
-
----
 
 ### Step 5: Outputs
 
@@ -169,14 +164,12 @@ python main.py
 - outputs/logs/  
 - outputs/costs/  
 
----
 
 ## Core Mapping Rule
 
 artifact_id → ARTIFACT/<artifact_id>/
 
 ---
-
 
 ## How Analysis Works
 
