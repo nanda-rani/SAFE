@@ -8,31 +8,39 @@ The Auditor relies on a ReAct (Reason/Act) agent powered by LangGraph. It is equ
 
 ## 🏗️ Repository Structure
 SAFE/
-│── main.py # Entry point for running SAFE
-│── config.yaml # Configuration file
-│── requirements.txt # Project dependencies
-│── SAFE_TOOL_OUTPUT.csv # Example output file
+│── main.py                  # Entry point
+│── config.yaml              # Configuration file
+│── requirements.txt         # Dependencies
+│── SAFE_TOOL_OUTPUT.csv     # Example output
 │
-├── core/ # Core pipeline and reasoning logic
-│ ├── auditor.py # Main auditing workflow
-│ ├── validator.py # Validation and checks
-│ ├── guardrails.py # Safety and constraint handling
-│ ├── schemas.py # Data structures and schemas
-│ └── logger.py # Logging utilities
+├── core/                    # Core reasoning & pipeline logic
+│   ├── auditor.py           # Main auditing pipeline
+│   ├── validator.py         # Validation logic
+│   ├── guardrails.py        # Safety constraints
+│   ├── schemas.py           # Data schemas
+│   └── logger.py            # Logging utilities
 │
-├── tools/ # Code and artifact analysis utilities
-│ ├── repo_parser.py # Repository structure parsing
-│ ├── ast_parser.py # AST-based code analysis
-│ ├── dependency_analyzer.py
-│ ├── file_reader.py
-│ ├── code_search.py
-│ └── artifact_resolver.py
+├── tools/                   # Static & structural analysis tools
+│   ├── repo_parser.py       # Repository structure parsing
+│   ├── ast_parser.py        # Code-level AST analysis
+│   ├── dependency_analyzer.py
+│   ├── file_reader.py
+│   ├── code_search.py
+│   └── artifact_resolver.py
 │
-├── llm/ # LLM interaction layer
-│ ├── provider.py # LLM provider abstraction
-│ └── cost_tracker.py # Token and cost tracking
+├── llm/                     # LLM interaction layer
+│   ├── provider.py          # LLM abstraction (OpenAI, etc.)
+│   └── cost_tracker.py      # Token & cost tracking
 │
-└── SAFE/ # Self-contained sample artifact used for testing SAFE on its own codebase
+├── prompts/                 # Prompt templates for LLM reasoning
+│   ├── ingestion.txt
+│   ├── verifier.txt
+│   ├── exploitability.txt
+│   ├── taxonomy.txt
+│   ├── finding_context.txt
+│   └── reporter.txt
+│
+└── SAFE/                    # Self-contained sample artifact used for testing SAFE on its own codebase
 
 ### Supported Models
 Configurable via `config.yaml`, the system supports:
