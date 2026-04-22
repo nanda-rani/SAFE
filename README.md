@@ -36,7 +36,9 @@ SAFE/
 ├── outputs/                      # Generated outputs from SAFE runs
 │   ├── final_results.csv         # Final classified findings/results
 │   ├── costs/                    # Cost tracking outputs
-│   └── logs/                     # Execution logs
+│   │   └── *.json                # Token usage and cost logs
+│   └── logs/                     # Execution logs (generated per run)
+│       └── *.log                 # Detailed execution traces
 │
 └── SAFE/                         # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
