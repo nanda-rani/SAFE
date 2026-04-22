@@ -39,8 +39,8 @@ SAFE/
 │   │   └── *.json                # Token usage and cost logs
 │   └── logs/                     # Execution logs (generated per run)
 │       └── *.log                 # Detailed execution traces
-│
-└── SAFE/                         # Self-contained sample artifact used for testing SAFE on its own codebase
+├── ARTIFACT
+│   └── SAFE/                     # Self-contained sample artifact used for testing SAFE on its own codebase
 ```
 
 ### Supported Models
