@@ -108,7 +108,7 @@ Check logs and outputs:
 
 ```bash
 cat outputs/logs/system.log
-cat outputs/logs/<artifact_id>.json
+cat outputs/logs/<finding_uid>.json
 ```
 
 ## Troubleshooting
